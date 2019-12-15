@@ -16,7 +16,7 @@ class _State extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Name here'),
+        title: Text('First app'),
       ),
       //hit Ctrl+space in vscode and alt + enter in android studio to know what are the options you can use in flutter widgets
       body: Container(
