@@ -22,6 +22,8 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
   @override
   void initState() {
     super.initState();
+
+    //// chaging the state of container after every 1.5 seconds
     timer = Timer.periodic(
         Duration(milliseconds: 1500), (Timer t) => changeState());
   }
@@ -49,6 +51,8 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
         ),
       ),
       body: Center(
+      //// animated container is similar to container
+
         child: AnimatedContainer(
           width: random.nextInt(400).toDouble(),
           height: random.nextInt(550).toDouble(),
@@ -66,12 +70,15 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
           duration: Duration(
             milliseconds: 800,
           ),
+          //// this is the animation curve in which container is animating
           curve: Curves.easeInOut,
         ),
       ),
     );
   }
 
+  //// this method is called in order to change the UI of container
+  //// in this way the size of container is changing after 1.5 seconds in a animated way.
   void changeState() {
     setState(() {});
   }
