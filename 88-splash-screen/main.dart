@@ -4,6 +4,7 @@ import 'dart:async';
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScream(),
+      
     ));
 
 class SplashScream extends StatefulWidget {
@@ -16,7 +17,8 @@ class _SplashScreamState extends State<SplashScream> {
   void initState() {
     //here we configure the time before navigation unsing the timer from dart async
     Timer.periodic(Duration(seconds: 3), (timer) {
-      Navigator.pushNamed(context, '/nextRoute');
+      //
+      Navigator.push(context,MaterialPageRoute(builder: (context)=>NextRoute()));
     });
     super.initState();
   }
@@ -27,4 +29,13 @@ class _SplashScreamState extends State<SplashScream> {
       body: Text('my splash screem'),
     );
   }
+}
+class NextRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      body: Text('New route')
+    );
+  }
+  
 }
